@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import foto from './Img/prueba_card.jpg';
 
 function App() {
   return (
-    <div className="App">
+    <><div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +19,26 @@ function App() {
           Learn React
         </a>
       </header>
+      <h1>Portfolio</h1>
+
     </div>
+    <div className="container mt-5">
+        <div className="card" style={{ width: '18rem' }}>
+          <img
+            src={foto}
+            className="card-img-top"
+            alt="Ejemplo" />
+          <div className="card-body">
+            <h5 className="card-title">Proyecto 1</h5>
+            <p className="card-text">
+              Ejemplo de proyecto realizado por mi.
+            </p>
+            <a href="#" className="btn btn-primary">
+              Ver más
+            </a>
+          </div>
+        </div>
+      </div></>
   );
 }
 
