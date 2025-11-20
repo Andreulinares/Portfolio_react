@@ -22,6 +22,12 @@ function App() {
       <h1>Portfolio</h1>
 
     </div>
+    <section className="container mt-5 text-center sobre-mi">
+      <h2 className='mb-3'>Sobre mi</h2>
+      <p>
+        Hola, soy Andreu Linares, Desarrollador FullStack con una gran pasion por la informatica.
+      </p>
+    </section>
     <div className="container mt-5">
         <div className="card" style={{ width: '18rem' }}>
           <img
