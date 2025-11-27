@@ -37,23 +37,50 @@
   }
 }
 
+.hero {
+  height: 80vh;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  animation: fadeDown 1.5s ease forwards;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  animation: fadeDown 2s ease forwards;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
 .sobre-mi{
   max-width: 800px;
-  margin: 60px auto;
+  margin: 80px auto;
   text-align: center;
   padding: 20px;
 }
 
 .sobre-mi h2{
   font-size: 2.5rem;
-  font-weight: 700;
   margin-bottom: 15px;
   color: #0d6efd;
 }
 
 .sobre-mi p{
-  font-size: 1.5rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.7;
   color: #555;
 }
 
@@ -97,4 +124,68 @@
 
 .mi-card .btn:hover{
   transform: scale(1.05);
+}
+
+
+.navbar{
+  padding: 15px 30px;
+}
+
+.nav-link{
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+
+.navbar-brand{
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  background: #0e0e0e; 
+  color: #ccc;
+  letter-spacing: 0.5px;
+}
+
+.footer h5 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-link {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+.footer p {
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.footer .col-md-4 {
+  line-height: 1.6;
+}
+
+.footer .border-top {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.footer p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-icon {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+  color: #0d6efd; /* azul elegante */
 }
