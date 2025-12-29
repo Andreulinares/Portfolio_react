@@ -1,16 +1,17 @@
 import foto from '../Img/prueba_card.jpg';
+import { Link } from "react-router-dom";
+import Particulas from './Particulas';
 
 export default function Inicio(){
     return (
         <><header className="hero">
+            <Particulas />
             <div className="container text-center text-white">
                 <h1 className="hero-title">Hola, soy Andreu Linares</h1>
                 <p className="hero-subtitle">
                     Desarrollador FullStack apasionado por la creación de experiencias digitales.
                 </p>
-                <a href="#proyectos" className="btn btn-primary btn-lg mt-3">
-                    Ver mis proyectos
-                </a>
+                <Link className="btn btn-primary btn-lg mt-3" to="/proyectos">Ver mis proyectos</Link>
             </div>
         </header><section className="sobre-mi">
                 <h2 className='mb-3'>Sobre mi</h2>
@@ -19,9 +20,7 @@ export default function Inicio(){
                     y la creación de soluciones modernas. Me encanta aprender nuevas tecnologías y mejorar
                     como profesional cada día.
                 </p>
-                <a href="#proyectos" className="btn btn-secondary btn-lg mt-3">
-                    Leer mas
-                </a>
+                <Link className="btn btn-primary btn-lg mt-3" to="/sobre-mi">Leer mas</Link>
             </section><div className="container mt-5">
                 <div className="row justify-content-center">
 

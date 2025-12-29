@@ -45,18 +45,23 @@
   align-items: center;
   text-align: center;
   color: white;
-  padding: 20px;
 }
 
 .hero-title {
   font-size: 3rem;
   animation: fadeDown 1.5s ease forwards;
+  z-index: 2;
 }
 
 .hero-subtitle {
   font-size: 1.4rem;
   opacity: 0.9;
   animation: fadeDown 2s ease forwards;
+  z-index: 2;
+}
+
+#tsparticles{
+  z-index: 1;
 }
 
 @keyframes fadeDown {
@@ -126,6 +131,11 @@
   transform: scale(1.05);
 }
 
+.leer-mas{
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: 0.25s;
+}
 
 .navbar{
   padding: 15px 30px;
@@ -188,4 +198,29 @@
 .footer-icon:hover {
   transform: scale(1.2);
   color: #0d6efd; /* azul elegante */
+}
+
+.sobre-mi-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.sobre-mi-container{
+  max-width: 900px;
+}
+
+.list-group-item {
+  border: none;
+  padding-left: 0;
+  font-size: 1.05rem;
+}
+
+.sobre-mi-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0d6efd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }

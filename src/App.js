@@ -13,18 +13,19 @@ import Proyectos from './pages/Proyectos';
 
 function App() {
   return (
-    <Router>
-      <Header />
+    <>
+      <Router>
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/sobre-mi" element={<SobreMi />} />
-        <Route path="/proyectos" element={<Proyectos />} />
-        <Route path="/contacto" element={<Contacto />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/sobre-mi" element={<SobreMi />} />
+          <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
 
-      <Footer />
-    </Router>
+        <Footer />
+      </Router></>
   );
 }
 

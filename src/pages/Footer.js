@@ -43,7 +43,7 @@ export default function Footer(){
                                 </a>
 
                                 <a
-                                    href="www.linkedin.com/in/andreu-linares-alvarez-151710270"
+                                    href="https://www.linkedin.com/in/andreu-linares-alvarez-151710270"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-light fs-3 footer-icon"
