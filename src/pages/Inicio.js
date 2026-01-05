@@ -28,8 +28,8 @@ export default function Inicio(){
                         <div className="card mi-card" style={{ width: '18rem' }}>
                             <img src={foto} className="card-img-top" alt="Ejemplo" />
                             <div className="card-body">
-                                <h5 className="card-title">Proyecto 1</h5>
-                                <p className="card-text">Ejemplo de proyecto realizado por mi.</p>
+                                <h5 className="card-title">Iwatch</h5>
+                                <p className="card-text">Proyecto academico realizado con laravel y Vue.</p>
                                 <a href="#" className="btn btn-primary">Ver más</a>
                             </div>
                         </div>
@@ -39,8 +39,8 @@ export default function Inicio(){
                         <div className="card mi-card" style={{ width: '18rem' }}>
                             <img src={foto} className="card-img-top" alt="Ejemplo" />
                             <div className="card-body">
-                                <h5 className="card-title">Proyecto 2</h5>
-                                <p className="card-text">Segundo proyecto interesante.</p>
+                                <h5 className="card-title">Foodrus</h5>
+                                <p className="card-text">Segundo proyecto academico con MySQL, html y Css</p>
                                 <a href="#" className="btn btn-primary">Ver más</a>
                             </div>
                         </div>
@@ -50,8 +50,8 @@ export default function Inicio(){
                         <div className="card mi-card" style={{ width: '18rem' }}>
                             <img src={foto} className="card-img-top" alt="Ejemplo" />
                             <div className="card-body">
-                                <h5 className="card-title">Proyecto 3</h5>
-                                <p className="card-text">Tercer proyecto en el portafolio.</p>
+                                <h5 className="card-title">Otros proyectos</h5>
+                                <p className="card-text">Mini proyectos realizados por mi.</p>
                                 <a href="#" className="btn btn-primary">Ver más</a>
                             </div>
                         </div>

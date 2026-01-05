@@ -14,7 +14,7 @@ import Proyectos from './pages/Proyectos';
 function App() {
   return (
     <>
-      <Router>
+      <Router basename='/Portfolio_react'>
         <Header />
 
         <Routes>
