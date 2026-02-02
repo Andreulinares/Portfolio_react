@@ -1,6 +1,7 @@
 import foto from '../Img/prueba_card.jpg';
 import { Link } from "react-router-dom";
 import Particulas from './Particulas';
+import { ReactTyped }  from "react-typed";
 
 export default function Inicio(){
     return (
@@ -11,6 +12,15 @@ export default function Inicio(){
                 <p className="hero-subtitle">
                     Desarrollador FullStack apasionado por la creación de experiencias digitales.
                 </p>
+                <ReactTyped
+                    className="typed-text"
+                    strings={["Fullstack", "Web design", "Unity developer", "Programmer"]}
+                    typeSpeed={40}
+                    backSpeed={60}
+                    loop
+                />
+                <br>
+                </br>
                 <Link className="btn btn-primary btn-lg mt-3" to="/proyectos">Ver mis proyectos</Link>
             </div>
         </header><section className="sobre-mi">

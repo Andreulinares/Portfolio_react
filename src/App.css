@@ -60,6 +60,10 @@
   z-index: 2;
 }
 
+.typed-text{
+  font-size: 1.3rem;
+}
+
 #tsparticles{
   z-index: 1;
 }
