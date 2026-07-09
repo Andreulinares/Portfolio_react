@@ -10,6 +10,7 @@ import Inicio from './pages/Inicio';
 import SobreMi from './pages/SobreMi';
 import Contacto from './pages/Contacto';
 import Proyectos from './pages/Proyectos';
+import Modelo3d from './pages/Modelo3d';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/sobre-mi" element={<SobreMi />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/modelo3d" element={<Modelo3d />} />
         </Routes>
 
         <Footer />

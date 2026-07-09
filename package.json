@@ -14,7 +14,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.6",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "^5.0.1",
     "react-tsparticles": "^2.12.2",
     "react-typed": "^2.0.12",
     "three": "^0.185.1",
@@ -32,8 +32,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
