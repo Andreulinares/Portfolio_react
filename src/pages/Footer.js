@@ -4,7 +4,7 @@ export default function Footer(){
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-md-4 mb-3">
+                        <div className="col-md-4 mb-3 text-start text-md-center">
                             <h5 className="fw-bold">Mi Portafolio</h5>
                             <p>
                                 Desarrollador FullStack apasionado por crear soluciones web eficientes
@@ -12,7 +12,7 @@ export default function Footer(){
                             </p>
                         </div>
 
-                        <div className="col-md-4 mb-3">
+                        <div className="col-md-4 mb-3 text-start text-md-center">
                             <h5 className="fw-bold">Enlaces</h5>
                             <ul className="list-unstyled">
                                 <li><a href="#inicio" className="footer-link">Inicio</a></li>
@@ -22,9 +22,9 @@ export default function Footer(){
                             </ul>
                         </div>
 
-                        <div className="col-md-4 mb-3">
+                        <div className="col-md-4 mb-3 text-start text-md-center">
                             <h5 className="fw-bold">Contacto</h5>
-                            <div className="d-flex gap-3">
+                            <div className="d-flex gap-3 justify-content-start justify-content-md-center">
 
                                 <a
                                     href="mailto:andreulinaresalvarez@gmail.com"

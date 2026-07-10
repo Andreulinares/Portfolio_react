@@ -1,29 +1,24 @@
 import { Canvas } from "@react-three/fiber";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { OrbitControls, Stage } from "@react-three/drei";
+import { Warrior } from "./Warrior";
 
-function Cube() {
-    const cube = useRef();
+function Model(props) {
+    const meshRef = useRef();
 
-    useFrame(() => {
-        cube.current.rotation.x += 0.01;
-        cube.current.rotation.y += 0.01;
-    })
-    return (
-        <mesh ref={cube}>
-            <boxGeometry />
-            <meshStandardMaterial color="royalblue" />
-        </mesh>
-    )
+    return  <Warrior ref={meshRef}  {...props} />
 }
 
 export default function Modelo3d() {
     return (
-        <Canvas style ={{ height: "500px" }}>
-            <ambientLight />
-            <pointLight position = {[10, 10, 10]} />
+        <Canvas style ={{ height: "500px" }} camera={{ fov: 45, position: [0, 2, 8] }}>
+            <ambientLight intensity={2.5} />
+            <directionalLight position={[5, 8, 5]} intensity={3} castShadow />
+            <directionalLight position={[-5, 2, 5]} intensity={2} />
 
-            <Cube />
+            <Model scale={[0.20, 0.20, 0.20]} position={[0, 0, 0]} />
+            <OrbitControls enableZoom={true} target={[0, 0, 0]} />
         </Canvas>
     )
 }

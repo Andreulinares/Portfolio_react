@@ -21,7 +21,7 @@ export default function Inicio(){
                 />
                 <br>
                 </br>
-                <Link className="btn btn-primary btn-lg mt-3" to="/proyectos">Ver mis proyectos</Link>
+                <Link className="mt-5 botonLeer" to="/proyectos"><span>Mis proyectos</span></Link>
             </div>
         </header><section className="sobre-mi">
                 <h2 className='mb-3'>Sobre mi</h2>
@@ -30,7 +30,7 @@ export default function Inicio(){
                     y la creación de soluciones modernas. Me encanta aprender nuevas tecnologías y mejorar
                     como profesional cada día.
                 </p>
-                <Link className="btn btn-primary btn-lg mt-3" to="/sobre-mi">Leer mas</Link>
+                <Link className="mt-3 botonLeer" to="/sobre-mi"><span>Leer mas</span></Link>
             </section><div className="container mt-5">
                 <div className="row justify-content-center">
 
