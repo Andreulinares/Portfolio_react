@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Warrior } from "./Warrior";
+import { Ciego_enemy } from "./Ciego_enemy";
 
 function Model(props) {
     const meshRef = useRef();
