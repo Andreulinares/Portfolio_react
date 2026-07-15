@@ -5,7 +5,8 @@ import { ReactTyped }  from "react-typed";
 
 export default function Inicio(){
     return (
-        <><header className="hero">
+        <>
+        <header className="hero">
             <Particulas />
             <div className="container text-center text-white">
                 <h1 className="hero-title">Hola, soy Andreu Linares</h1>
