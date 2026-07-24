@@ -41,6 +41,12 @@ export default function Inicio(){
                             <div className="card-body">
                                 <h5 className="card-title">Iwatch</h5>
                                 <p className="card-text">Proyecto academico realizado con laravel y Vue.</p>
+                                <div className="mb-3 mt-auto"> 
+                                    <span className='badge bg-primary me-1'>Laravel</span>
+                                    <span className='badge bg-primary me-1'>Vue.js</span>
+                                    <span className='badge bg-primary me-1'>MySQL</span>
+                                    <span className='badge bg-primary me-1'>JavaScript</span>
+                                </div>
                                 <a href="#" className="btn btn-primary">Ver más</a>
                             </div>
                         </div>
@@ -51,7 +57,12 @@ export default function Inicio(){
                             <img src={foto} className="card-img-top" alt="Ejemplo" />
                             <div className="card-body">
                                 <h5 className="card-title">Foodrus</h5>
-                                <p className="card-text">Segundo proyecto academico con MySQL, html y Css</p>
+                                <p className="card-text">Aplicativo restaurante web basado en toysrus</p>
+                                <div className="mb-3 mt-auto"> 
+                                    <span className='badge bg-primary me-1'>Html</span>
+                                    <span className='badge bg-primary me-1'>Css</span>
+                                    <span className='badge bg-primary me-1'>MySQL</span>
+                                </div>
                                 <a href="#" className="btn btn-primary">Ver más</a>
                             </div>
                         </div>
