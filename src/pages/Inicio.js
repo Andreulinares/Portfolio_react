@@ -1,4 +1,6 @@
 import foto from '../Img/prueba_card.jpg';
+import foodrus from '../Img/foodrus1.png';
+import iwatch from '../Img/cap4.png';
 import { Link } from "react-router-dom";
 import Particulas from './Particulas';
 import { ReactTyped }  from "react-typed";
@@ -37,7 +39,7 @@ export default function Inicio(){
 
                     <div className="col-md-4 d-flex justify-content-center">
                         <div className="card mi-card" style={{ width: '18rem' }}>
-                            <img src={foto} className="card-img-top" alt="Ejemplo" />
+                            <img src={iwatch} className="card-img-top" alt="Ejemplo" />
                             <div className="card-body">
                                 <h5 className="card-title">Iwatch</h5>
                                 <p className="card-text">Proyecto academico realizado con laravel y Vue.</p>
@@ -54,7 +56,7 @@ export default function Inicio(){
 
                     <div className="col-md-4 d-flex justify-content-center">
                         <div className="card mi-card" style={{ width: '18rem' }}>
-                            <img src={foto} className="card-img-top" alt="Ejemplo" />
+                            <img src={foodrus} className="card-img-top" alt="Ejemplo" />
                             <div className="card-body">
                                 <h5 className="card-title">Foodrus</h5>
                                 <p className="card-text">Aplicativo restaurante web basado en toysrus</p>
