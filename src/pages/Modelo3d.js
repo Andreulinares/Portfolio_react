@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { OrbitControls, Stage, Text, Bounds } from "@react-three/drei";
 import { Warrior } from "./Warrior";
 import { Ciego_enemy } from "./Ciego_enemy";
+import { Room } from "./Room";
 import * as THREE from 'three';
 import { Interactuar } from "./Interactuar";
 import { InteractMobile } from "./InteractMobile";
@@ -57,12 +58,25 @@ function InteractCiego({ rotation, ...props }) {
     );
 }
 
+function InteractRoom({ rotation, ...props }) {
+    const { bind } = Interactuar(0.005, { rotation }); 
+
+    return (
+        <group {...props}>
+            <group {...bind}>
+                <Room />
+            </group>
+        </group>
+    );
+}
+
 export default function Modelo3d() {
     const isMobile = InteractMobile();
 
     const warriorPos = isMobile ? [0, 3, 0] : [0, 0, 0];
     const ciegoPos = isMobile ? [0, -3, 0] : [-5, -0.2, 0];
 
+    const roomPos = isMobile ? [0, -8, 0] : [-2.5, -4, 0];
     const cameraPos = isMobile ? [0, 0, 16] : [0, 0.5, 8];
     const modelos = (
         <>
@@ -71,6 +85,10 @@ export default function Modelo3d() {
                 scale={[0.10, 0.10, 0.10]}
                 position={ciegoPos}
                 rotation={[0, 280 + Math.PI, 0]}
+            />
+            <InteractRoom 
+                scale={[0.30, 0.30, 0.30]}
+                position={roomPos}
             />
         </>
     );
