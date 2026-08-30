@@ -29,7 +29,7 @@ export default function Inicio(){
         </header><section className="sobre-mi">
                 <h2 className='mb-3'>Sobre mi</h2>
                 <p>
-                    Desarrollador FullStack con una gran pasión por la informática
+                    Desarrollador FullStack y desarrollador de videojuegos con una gran pasión por la informática
                     y la creación de soluciones modernas. Me encanta aprender nuevas tecnologías y mejorar
                     como profesional cada día.
                 </p>
@@ -49,7 +49,7 @@ export default function Inicio(){
                                     <span className='badge bg-primary me-1'>MySQL</span>
                                     <span className='badge bg-primary me-1'>JavaScript</span>
                                 </div>
-                                <a href="#" className="btn btn-primary">Ver más</a>
+                                <a href="https://github.com/Andreulinares/iWatch" className="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ export default function Inicio(){
                                     <span className='badge bg-primary me-1'>Css</span>
                                     <span className='badge bg-primary me-1'>MySQL</span>
                                 </div>
-                                <a href="#" className="btn btn-primary">Ver más</a>
+                                <a href="https://github.com/Andreulinares/testLinares" className="btn btn-primary">Ver más</a>
                             </div>
                         </div>
                     </div>

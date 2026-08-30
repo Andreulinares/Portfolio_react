@@ -66,6 +66,16 @@ function InteractRoom({ rotation, ...props }) {
             <group {...bind}>
                 <Room />
             </group>
+
+            <Text
+                    position={[0, -3, 0]}
+                    fontSize={1.5}
+                    color="black"
+                    anchorX="center"
+                    anchorY="top"
+                >
+                    Habitación lowpoly
+            </Text>
         </group>
     );
 }
@@ -76,10 +86,12 @@ export default function Modelo3d() {
     const warriorPos = isMobile ? [0, 3, 0] : [0, 0, 0];
     const ciegoPos = isMobile ? [0, -3, 0] : [-5, -0.2, 0];
 
-    const roomPos = isMobile ? [0, -8, 0] : [-2.5, -4, 0];
+    const roomPos = isMobile ? [0, -9, 0] : [6, -2, 0];
     const cameraPos = isMobile ? [0, 0, 16] : [0, 0.5, 8];
+
+    const mIzquierda = -1.5;
     const modelos = (
-        <>
+        <group position={[mIzquierda, 0, 0]}>
             <InteractWarrior scale={[0.20, 0.20, 0.20]} position={warriorPos} />
             <InteractCiego
                 scale={[0.10, 0.10, 0.10]}
@@ -90,7 +102,7 @@ export default function Modelo3d() {
                 scale={[0.30, 0.30, 0.30]}
                 position={roomPos}
             />
-        </>
+        </group>
     );
     return (
         <Canvas key={isMobile ? "mobile" : "desktop"} style ={{ height: "500px" }} camera={{ fov: isMobile ? 50 : 45, position: cameraPos }}>
