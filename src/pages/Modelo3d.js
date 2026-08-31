@@ -7,12 +7,17 @@ import { Room } from "./Room";
 import * as THREE from 'three';
 import { Interactuar } from "./Interactuar";
 import { InteractMobile } from "./InteractMobile";
+import { ModelosMobile} from "./ModelosMobile";
 
 /*function Model(props) {
     const meshRef = useRef();
 
     return  <Warrior ref={meshRef}  {...props} />
 }*/
+function RotatableModel({ children, velocidad = 0.007, rotation }) {
+    const { bind } = Interactuar(velocidad, { rotation });
+    return <group {...bind}>{children}</group>;
+}
 
 function InteractWarrior({ rotation, ...props }) {
     const { bind } = Interactuar(0.007, { rotation });
@@ -90,33 +95,47 @@ export default function Modelo3d() {
     const cameraPos = isMobile ? [0, 0, 16] : [0, 0.5, 8];
 
     const mIzquierda = -1.5;
-    const modelos = (
-        <group position={[mIzquierda, 0, 0]}>
-            <InteractWarrior scale={[0.20, 0.20, 0.20]} position={warriorPos} />
-            <InteractCiego
-                scale={[0.10, 0.10, 0.10]}
-                position={ciegoPos}
-                rotation={[0, 280 + Math.PI, 0]}
-            />
-            <InteractRoom 
-                scale={[0.30, 0.30, 0.30]}
-                position={roomPos}
-            />
-        </group>
-    );
+
+    if (isMobile) {
+        return (
+            <div style={{ width: "100%", padding: "10px 0" }}>
+                <ModelosMobile cameraPos={[0, 0, 5.5]} fov={50}>
+                    <InteractWarrior scale={[0.25, 0.25, 0.25]} position={[0, -1.4, 0]} />
+                </ModelosMobile>
+
+                <ModelosMobile cameraPos={[0, 0, 7.5]} fov={50}>
+                    <InteractCiego 
+                        scale={[0.18, 0.18, 0.18]} 
+                        position={[0, -2.7, 0]} 
+                        rotation={[0, 280 + Math.PI, 0]} 
+                    />
+                </ModelosMobile>
+                
+                <ModelosMobile cameraPos={[0, 1, 10]} fov={50}>
+                    <InteractRoom scale={[0.40, 0.40, 0.40]} position={[0, -2, 0]} />
+                </ModelosMobile>
+            </div>
+        );
+    }
+
     return (
-        <Canvas key={isMobile ? "mobile" : "desktop"} style ={{ height: "500px" }} camera={{ fov: isMobile ? 50 : 45, position: cameraPos }}>
+        <Canvas style ={{ height: "500px"}} camera={{ fov: 45, position: cameraPos }}>
             <ambientLight intensity={2.5} />
             <directionalLight position={[5, 8, 5]} intensity={3} castShadow />
             <directionalLight position={[-5, 2, 5]} intensity={2} />
 
-            {isMobile ? (
-                <Bounds fit clip observe margin={1.2}>
-                    {modelos}
-                </Bounds>
-            ) : (
-                modelos
-            )}
+            <group position={[mIzquierda, 0, 0]}>
+                <InteractWarrior scale={[0.20, 0.20, 0.20]} position={warriorPos} />
+                <InteractCiego
+                    scale={[0.10, 0.10, 0.10]}
+                    position={ciegoPos}
+                    rotation={[0, 280 + Math.PI, 0]}
+                />
+                <InteractRoom 
+                    scale={[0.30, 0.30, 0.30]}
+                    position={roomPos}
+                />
+            </group> 
         </Canvas>
     );
 }

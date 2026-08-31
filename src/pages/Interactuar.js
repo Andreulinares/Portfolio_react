@@ -53,6 +53,8 @@ export function Interactuar(velocidad = 0.007, options = {}) {
     };
 
     const handlePointerUp = (e) => {
+        e.stopPropagation(); 
+        
         if (e.target.hasPointerCapture?.(e.pointerId)) {
             e.target.releasePointerCapture(e.pointerId);
         }
