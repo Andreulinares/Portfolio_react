@@ -76,7 +76,7 @@ export default function Inicio(){
                             <div className="card-body">
                                 <h5 className="card-title">Otros proyectos</h5>
                                 <p className="card-text">Mini proyectos realizados por mi.</p>
-                                <a href="#" className="btn btn-primary">Ver más</a>
+                                <Link to="/proyectos" className="btn btn-primary">Ver más</Link>
                             </div>
                         </div>
                     </div>
