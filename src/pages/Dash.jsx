@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const GeometryDashGame = () => {
+const Dash = () => {
     const canvasRef = useRef(null);
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(() => {
@@ -129,6 +129,7 @@ class Obstacle {
 
 let obstacles = [];
 let spawnTimer = 0;
+let animationFrameId;
 
 // 3. DETECCIÓN DE COLISIONES (AABB Simplificado)
 function resolveCollisions(player, obs) {
@@ -286,7 +287,7 @@ function gameLoop() {
         }
     }
 
-    requestAnimationFrame(gameLoop);
+    animationFrameId = requestAnimationFrame(gameLoop);
 }
 
 // 6. CONTROLES / INPUTS
