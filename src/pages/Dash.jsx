@@ -20,6 +20,7 @@ let score = 0;
 let currentScore = 0;
 let isGameOver = false;
 let canRestart = false;
+let particles = []; // Para partículas de colisión
 
 // 1. JUGADOR (El Cubo)
 const player = {
@@ -124,6 +125,32 @@ class Obstacle {
             ctx.stroke();
         }
         ctx.restore();
+    }
+}
+
+class Particle{
+    constructor(x, y){
+        this.x = x;
+        this.y = y + Math.random() * 30 + 5; 
+        this.size = Math.random() * 6 + 4;
+        this.vx = -(gameSpeed * 0.5 + Math.random() * 2);
+        this.vy = (Math.random() - 0.5) * 2;
+        this.alpha = 1;
+        this.decay = Math.random() * 0.03 + 0.02;
+    }
+
+    update(){
+        this.x += this.vx;
+        this.y += this.vy;
+        this.alpha -= this.decay;
+    }
+
+    draw(){
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.fillStyle = "#ff0055";
+        ctx.fillRect(this.x, this.y, this.size, this.size);
+        ctx.restore(); 
     }
 }
 
@@ -239,6 +266,21 @@ function gameLoop() {
 
     drawBackground();
 
+    if (player.isGrounded) {
+        particles.push(new Particle(player.x, player.y + player.size - 10)); // Partículas al tocar el suelo
+        particles.push(new Particle(player.x, player.y + player.size - 10)); // Partículas al tocar el suelo
+    }
+
+    // Actualizar y dibujar partículas
+    for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        particles[i].draw();
+
+        if (particles[i].alpha <= 0) {
+            particles.splice(i, 1);
+        }
+    }
+
     // Actualizar y dibujar jugador
     player.update();
     player.draw();
@@ -296,6 +338,7 @@ function handleJump() {
         if (!canRestart) return; 
         // Reiniciar juego
         obstacles = [];
+        particles = [];
         currentScore = 0;
         setScore(0);
         gameSpeed = 5;
