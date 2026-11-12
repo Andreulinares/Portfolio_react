@@ -53,6 +53,16 @@ export default function SobreMi(){
                         <li className="list-group-item">Animación 3D y 2D y manejo de assets</li>
                         <li className="list-group-item">Modelaje 3D con maya y blender</li>
                     </ul>
+                    <div className="mt-3">
+                        <a 
+                            href="https://andreulinares.itch.io/" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="botonLeer"
+                        >
+                            Ver mis juegos
+                        </a>
+                    </div>
                 </div>
 
                 <div className="col-md-4">

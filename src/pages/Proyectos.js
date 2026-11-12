@@ -34,7 +34,7 @@ export default function Proyectos(){
                             onClick={() => setMostrarJuego(!mostrarJuego)} 
                             className={`btn btn-sm ${mostrarJuego ? 'btn-danger' : 'btn-outline-primary'}`}
                         >
-                            {mostrarJuego ? 'Cerrar Juego x' : 'Jugar ahora 🕹️'}
+                            {mostrarJuego ? 'Quit x' : 'Play Game'}
                         </button>
                     </div>
                     <p className="mb-2 text-muted">

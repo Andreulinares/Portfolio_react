@@ -131,10 +131,10 @@ class Obstacle {
 class Particle{
     constructor(x, y){
         this.x = x;
-        this.y = y + Math.random() * 30 + 5; 
+        this.y = y - Math.random() * 15; 
         this.size = Math.random() * 6 + 4;
         this.vx = -(gameSpeed * 0.5 + Math.random() * 2);
-        this.vy = (Math.random() - 0.5) * 2;
+        this.vy = -(Math.random() * 1.5) + 0.2;
         this.alpha = 1;
         this.decay = Math.random() * 0.03 + 0.02;
     }
@@ -267,8 +267,9 @@ function gameLoop() {
     drawBackground();
 
     if (player.isGrounded) {
-        particles.push(new Particle(player.x, player.y + player.size - 10)); // Partículas al tocar el suelo
-        particles.push(new Particle(player.x, player.y + player.size - 10)); // Partículas al tocar el suelo
+        const baseCubeY = player.y + player.size - 6; // Ajuste para que las partículas salgan desde la base del cubo
+        particles.push(new Particle(player.x, baseCubeY));
+        particles.push(new Particle(player.x, baseCubeY));
     }
 
     // Actualizar y dibujar partículas
@@ -398,7 +399,7 @@ gameLoop();
         background: 'linear-gradient(to bottom, #1a0033, #4d004d)',
         boxShadow: '0 0 20px rgba(255, 0, 255, 0.5)',
         cursor: 'pointer',
-        maxWidth: '100%', // Para que sea responsivo
+        maxWidth: '100%', // Para que sea responsive
         height: 'auto'
         }}
         />
